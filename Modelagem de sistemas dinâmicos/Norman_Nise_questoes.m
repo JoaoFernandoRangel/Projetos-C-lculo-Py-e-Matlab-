@@ -1,0 +1,24 @@
+1%%
+%Questão 17
+clear all
+clc
+x = [4 6 2 0];
+roots(x)
+y= [8 16 8 1];
+roots(y)
+%%
+%questão 24
+clc
+x = [1 2 2];
+roots(x)
+%%
+%Questão 26
+clc
+x = [2 17 44 45 20];
+roots(x)
+y = [1 6 9];
+roots(y)
+%%
+clc
+x = [1/3 5/3 7/3];
+roots(x)
