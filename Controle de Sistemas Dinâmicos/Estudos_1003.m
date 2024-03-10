@@ -21,12 +21,37 @@ grid on
 hold on
 step(feedback(ftma,1))
 %%
+clear all
+close all
+clc
 
+p = -0.3307 + i*0.5864;
+modulo = abs(p);
+angulo = angle(p); % em radianos
+cos(pi - angulo);
+kv = 1.06/3
+%%
+clear all
+close all
+clc
 
+s = tf('s');
+ftma = 10/(s*(s+1));
+cs = 0.556*(s+1)/(2*s+1);
 
+step(feedback(ftma,1));
+grid on
+hold on
+step(feedback(cs*ftma,1))
 
-
-
+%%
+close all
+ftmf = feedback(ftma,1)
+bode(ftmf)
+hold on
+bode(feedback(cs*ftma,1))
+close all
+rlocus(feedback(cs*ftma,1))
 
 
 
