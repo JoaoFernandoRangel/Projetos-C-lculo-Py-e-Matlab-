@@ -33,7 +33,7 @@ clc
  mp = 0.16;
  beta = log(mp);
  s = sqrt((beta^2)/(beta^2 + pi^2));
- s
+ 
 
 
 
