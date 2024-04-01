@@ -1,0 +1,48 @@
+%{
+Códigos para estudo de resposta em frequência
+%}
+close all
+clear all
+clc
+
+s = tf('s');
+G = 0.005/(s*(s+0.05));
+ts = 18; %segundos pre requisito
+Mp = 0.3; %amplitude pre requisito
+%%
+figure(1)
+step(feedback(G,1))
+grid on
+figure(2)
+bode(G)
+grid on
+%%
+close all
+%%
+ksi_desejado = abs(log(Mp))/(sqrt(pi^2 + log(Mp)^2))
+wd_desejado = (pi - acos(ksi_desejado))/ts
+wn_desejado = wd_desejado/sqrt(1-ksi_desejado^2)
+
+pm = 100*ksi_desejado 
+phi_d = (40.8-24)
+phi = phi_d*(pi/180)
+alfa = (1-sin(phi))/(1+sin(phi))
+
+T = 1/(sqrt(alfa)*wn_desejado)
+
+C = 2.2*(11.68*s+1)/(6.44*s+1);
+bode(G, 'r')
+hold on
+bode(G*C, 'b')
+grid on
+
+%Plotagem do step e bode antes da compensação
+%{
+figure(1)
+step(feedback(G,1))
+grid on
+figure(2)
+bode(feedback(G,1))
+grid on
+%}
+
