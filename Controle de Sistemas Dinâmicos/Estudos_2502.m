@@ -30,9 +30,11 @@ roots(y)
 clear 
 close all
 clc
- mp = 0.16;
- beta = log(mp);
- s = sqrt((beta^2)/(beta^2 + pi^2));
+mp = 0.163;
+beta = log(mp);
+s = sqrt((beta^2)/(-beta^2 + pi^2))
+ts = 0.3;
+wd = pi / ts 
  
 
 
