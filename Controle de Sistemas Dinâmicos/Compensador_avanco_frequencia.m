@@ -22,6 +22,11 @@ alfa = (1-sin(phi))/(1+sin(phi))
 T = 1/(sqrt(alfa)*wn_desejado) %wn_desejado = wc
 ganho = 10*sqrt(alfa)*abs(0.005/((1i*wn_desejado+0.05)*(1i*wn_desejado)))
 C = ganho*(T*s+1)/(T*alfa*s+1)
+
+
+
+
+%%
 figure(1)
 bode(G, 'r')
 hold on

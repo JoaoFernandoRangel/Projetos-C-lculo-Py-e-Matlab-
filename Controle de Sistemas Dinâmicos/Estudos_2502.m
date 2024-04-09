@@ -2,10 +2,10 @@ clear
 close all
 clc
 
-s = tf('s');
-t = 10/(s^5 + 2*s^4 +3*s^3 +6*s^2+5*s+3);
+ksi = tf('s');
+t = 10/(ksi^5 + 2*ksi^4 +3*ksi^3 +6*ksi^2+5*ksi+3);
 %rlocus(t)
-d = 10/(3*s^5+5*s^4+6*s^3+3*s^2+2*s+1);
+d = 10/(3*ksi^5+5*ksi^4+6*ksi^3+3*ksi^2+2*ksi+1);
 rlocus(d)
 %%
 clear 
@@ -27,16 +27,6 @@ clc
 y = [1 2 4];
 roots(y)
 %%
-clear 
-close all
-clc
-mp = 0.163;
-beta = log(mp);
-s = sqrt((beta^2)/(-beta^2 + pi^2))
-ts = 0.3;
-wd = pi / ts 
- 
-
 
 
 
