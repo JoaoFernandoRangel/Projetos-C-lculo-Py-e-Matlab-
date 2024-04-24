@@ -5,8 +5,8 @@ clc
 
 s = tf('s');
 funcao = 400/(s*(s+20));
-mp = 0.1;
-tp = 0.1;
+mp = 0.2;
+tp = 0.05;
 a1 = abs(log(mp));
 ksi = sqrt(a1^2/(a1^2+pi^2))
 wd = pi/tp
