@@ -1,6 +1,14 @@
 clear all
 clc
 hold on
+%{
+Separar o script em uma máquina de estados
+Colocar MUX de seleção de cada estado
+Prever os estados, o input será o lado do quadrado.
+Generalizar e otimizar posteriormente.
+%}
+
+
 % Parameters
 WheelRadius = 0.065/2; % Wheel radius in meters
 TrackWidth = 0.02;  % Distance between the wheels (track width) in meters
