@@ -4,18 +4,18 @@ hold on
 % Parameters
 WheelRadius = 0.065/2; % Wheel radius in meters
 TrackWidth = 0.02;  % Distance between the wheels (track width) in meters
-lado = 5;
+lado = 2;
 % Define the kinematic model
 kinematicModel = differentialDriveKinematics('WheelRadius', WheelRadius, 'TrackWidth', TrackWidth);
 
 % Initial conditions
-ini_pos_x =  -4;
+ini_pos_x =  0;
 ini_pos_y = 0;
 angulo = 0;
 ini_orientation = atan(angulo*pi/180); % Initial orientation in radians
 
 % Wheel speeds
-W_speed_L = 20; % Left wheel speed in rad/s
+W_speed_L = 30; % Left wheel speed in rad/s
 W_speed_R = 30;  % Right wheel speed in rad/s
 W_media = (W_speed_L + W_speed_R)/2;
 % Initial state [x position, y position, orientation]
